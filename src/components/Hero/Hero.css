@@ -1,0 +1,272 @@
+.hero-section {
+  background-color: #F8FAFC;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 80px 20px;
+}
+
+.hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.hero-content {
+  flex: 1;
+  animation: fadeUp 1s ease-out;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #1E293B;
+  margin-bottom: 24px;
+  line-height: 1.2;
+}
+
+.hero-description {
+  font-size: 1.25rem;
+  color: #475569;
+  margin-bottom: 32px;
+  line-height: 1.6;
+}
+
+.hero-button {
+  background-color: #4F46E5;
+  color: white;
+  border: none;
+  padding: 16px 40px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 14px rgba(79, 70, 229, 0.4);
+}
+
+.hero-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(79, 70, 229, 0.6);
+}
+
+.hero-illustration {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  animation: fadeUp 1s ease-out 0.3s backwards;
+}
+
+.robot-illustration {
+  width: 400px;
+  height: 400px;
+  position: relative;
+}
+
+.robot-head {
+  width: 200px;
+  height: 180px;
+  background: linear-gradient(135deg, #06B6D4, #4F46E5);
+  border-radius: 40px;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 8px 32px rgba(79, 70, 229, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.robot-eye {
+  width: 40px;
+  height: 40px;
+  background-color: #1E293B;
+  border-radius: 50%;
+  position: absolute;
+  top: 50px;
+  animation: blink 3s infinite;
+}
+
+.robot-eye.left {
+  left: 40px;
+}
+
+.robot-eye.right {
+  right: 40px;
+}
+
+.robot-eye::after {
+  content: '';
+  width: 15px;
+  height: 15px;
+  background-color: #10B981;
+  border-radius: 50%;
+  position: absolute;
+  top: 8px;
+  left: 8px;
+}
+
+.robot-mouth {
+  width: 60px;
+  height: 30px;
+  background-color: #1E293B;
+  border-radius: 0 0 30px 30px;
+  position: absolute;
+  bottom: 30px;
+}
+
+.robot-body {
+  width: 160px;
+  height: 140px;
+  background: linear-gradient(135deg, #06B6D4, #4F46E5);
+  border-radius: 30px;
+  position: absolute;
+  top: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 8px 32px rgba(79, 70, 229, 0.3);
+}
+
+.robot-arm {
+  width: 30px;
+  height: 100px;
+  background: linear-gradient(135deg, #06B6D4, #4F46E5);
+  border-radius: 15px;
+  position: absolute;
+  top: 220px;
+}
+
+.robot-arm.left {
+  left: 80px;
+  transform: rotate(20deg);
+}
+
+.robot-arm.right {
+  right: 80px;
+  transform: rotate(-20deg);
+}
+
+.robot-antenna {
+  width: 8px;
+  height: 40px;
+  background-color: #F59E0B;
+  border-radius: 4px;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.robot-antenna::after {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background-color: #F59E0B;
+  border-radius: 50%;
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: pulse 2s infinite;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes blink {
+  0%, 90%, 100% {
+    transform: scaleY(1);
+  }
+  95% {
+    transform: scaleY(0.1);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: translateX(-50%) scale(1);
+  }
+  50% {
+    transform: translateX(-50%) scale(1.2);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+
+  .robot-illustration {
+    width: 300px;
+    height: 300px;
+  }
+
+  .robot-head {
+    width: 150px;
+    height: 135px;
+  }
+
+  .robot-eye {
+    width: 30px;
+    height: 30px;
+  }
+
+  .robot-eye.left {
+    left: 30px;
+  }
+
+  .robot-eye.right {
+    right: 30px;
+  }
+
+  .robot-eye::after {
+    width: 10px;
+    height: 10px;
+    top: 6px;
+    left: 6px;
+  }
+
+  .robot-body {
+    width: 120px;
+    height: 105px;
+    top: 150px;
+  }
+
+  .robot-arm {
+    width: 25px;
+    height: 80px;
+    top: 170px;
+  }
+
+  .robot-arm.left {
+    left: 60px;
+  }
+
+  .robot-arm.right {
+    right: 60px;
+  }
+}

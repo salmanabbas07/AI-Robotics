@@ -1,0 +1,163 @@
+.registration-section {
+  padding: 80px 20px;
+  background-color: #F8FAFC;
+}
+
+.registration-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.registration-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1E293B;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.success-message {
+  background-color: #10B981;
+  color: white;
+  padding: 16px 24px;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 30px;
+  animation: fadeIn 0.5s ease;
+}
+
+.error-message-alert {
+  background-color: #EF4444;
+  color: white;
+  padding: 16px 24px;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 30px;
+  animation: fadeIn 0.5s ease;
+}
+
+.registration-form {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1E293B;
+  margin-bottom: 8px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 14px 16px;
+  font-size: 1rem;
+  border: 2px solid #E2E8F0;
+  border-radius: 10px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.form-group input:focus {
+  border-color: #4F46E5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+.form-group input.error {
+  border-color: #EF4444;
+}
+
+.form-group input.error:focus {
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+.error-message {
+  display: block;
+  color: #EF4444;
+  font-size: 0.875rem;
+  margin-top: 6px;
+  font-weight: 500;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 16px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: white;
+  background-color: #4F46E5;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.submit-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(79, 70, 229, 0.4);
+}
+
+.submit-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .registration-title {
+    font-size: 2rem;
+  }
+
+  .registration-form {
+    padding: 30px 24px;
+  }
+
+  .form-group input {
+    padding: 12px 14px;
+    font-size: 0.95rem;
+  }
+
+  .submit-button {
+    padding: 14px;
+    font-size: 1rem;
+  }
+}
